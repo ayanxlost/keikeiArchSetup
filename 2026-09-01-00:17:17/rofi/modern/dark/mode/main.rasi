@@ -1,0 +1,131 @@
+//
+// Original Author : Aditya Shakya (adi1090x)
+// Original Github : @adi1090x
+// Adapted by : @GeodeArc
+//
+
+@import "options/font.rasi"
+@import "options/wallpaper.rasi"
+@import "options/colors.rasi"
+
+// PROPERTIES
+* {
+    background:                  rgba(54, 31, 41, 0.7);
+    background-alt:              #141414;
+    selected:                    #0A0A0A;
+}
+
+// WINDOW
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       450;
+
+    // FOR ALL WIDGETS
+    enabled:                     true;
+    border:                      1px solid;
+    border-radius:               20px;
+    border-color:                #E7C1A4;
+    cursor:                      "default";
+    background-color:            rgba(23, 14, 12, 0.7);
+}
+
+// MAINBOX
+mainbox {
+    enabled:                     true;
+    border-color:                @selected;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview", "message" ];
+}
+
+// TOP BAR
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     50px 80px;
+    background-color:            transparent;
+    children:                    [ "textbox-prompt-colon", "dummy","prompt"];
+}
+
+dummy {
+    // CENTER PADDING
+    background-color:            transparent;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "󰸱 Mode";
+    padding:                     12px;
+    border-radius:               100%;
+    text-color:                  @foreground;
+    background-color:            @background-alt;
+}
+prompt {
+    enabled:                     true;
+    padding:                     12px;
+    border-radius:               100%;
+    text-color:                  @foreground;
+    background-color:            @background-alt;
+}
+
+// LIST
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     15px;
+    margin:                      15px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+// ELEMENTS
+element {
+    enabled:                     true;
+    padding:                     30px 10px;
+    border-radius:               12px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "feather bold 32";
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element selected.normal {
+    background-color:            #b89479;
+    text-color:                  @foreground;
+}
+
+// MESSAGE
+message {
+    enabled:                     true;
+    padding:                     15px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}

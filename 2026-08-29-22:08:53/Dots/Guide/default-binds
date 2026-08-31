@@ -1,0 +1,71 @@
+Default Keybinds. PRESS Q TO EXIT.
+
+SUPER is your windows key, also known as Mod.
+ALT is your ALT key, also known as Mod2.
+
+At any time, press SUPER + K to see keybinds.
+This will NOT update if you change your keybinds.
+
+Important:
+SUPER + SPACE = Launch Apps (App Menu)
+SUPER + Q = Quit App
+CTRL + ALT + DELETE = Exit Hyprland
+
+Base Apps:
+SUPER + ENTER = Open Terminal
+SUPER + E = Open File Manager
+SUPER + T = Open Text Editor
+SUPER + B = Open Browser
+CTRL + SHIFT + ESC = Task Manager (Resources)
+
+Actions:
+SUPER + V = Toggle App Floating
+SUPER + P = Toggle App Pseudo
+SUPER + F = Toggle App Fullscreen
+SUPER + SHIFT + F = Toggle App Maximized
+
+SUPER + S = Quick Screenshot
+SUPER + L = Lock Computer
+
+Menus:
+SUPER + SHIFT + L = Power menu
+SUPER + SHIFT + S = Screenshot Menu
+SUPER + C = Clipboard History
+SUPER + PERIOD (.) = Emoji Selector
+SUPER + M = Theme Selector
+
+Terminal actions:
+SUPER + I = Settings Menu
+SUPER + K = See Default Keybinds (doesnt update!)
+
+
+Waybar Controls:
+SUPER + SHIFT + B = Refresh Waybar
+SUPER + ALT + B = Disable/enable Waybar
+
+Wallpaper:
+SUPER + W = Select Wallpaper
+SUPER + SHIFT + W = Random Wallpaper
+
+
+Workspace Management:
+SUPER + (num) = Switch to workspace (num)
+SUPER + (arrow) = Switch to workspace to the left/right
+
+SUPER + SHIFT + (num) = Move window to workspace (num)
+SUPER + SHIFT + (arrow) = Move window to workspace left/right
+
+SUPER + CTRL + (num)	= Move window silently to workspace (num)
+SUPER + CTRL + (arrow) = Move window silently to workspace left/right
+
+
+Window Management:
+ALT + (arrow) = Focus window to the (direction)
+ALT + SHIFT + (arrow) = Move window to the (direction)
+ALT + CTRL + (arrow) = Resize window from the (direction)
+
+ALT + TAB = Switch windows
+SUPER + TAB	= Switch windows (reverse)
+
+SUPER + MOUSE_LEFT = Move window
+SUPER + MOUSE_RIGHT = Resize window

@@ -1,0 +1,8 @@
+* {{
+	background: 	{background}CC;
+	foreground: 	{foreground};
+	selected:	    {color1}66;
+	border:     	{foreground}CC;
+	accent: 		{color1};
+	accentlow:  	{color1}66;
+}}

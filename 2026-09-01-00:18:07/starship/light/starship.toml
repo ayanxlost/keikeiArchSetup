@@ -1,0 +1,135 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """
+[ ](#DFE1E8)\
+$python\
+$username\
+[](bg:#B9C0CD fg:#DFE1E8)\
+$directory\
+[](fg:#B9C0CD bg:#9CA6B8)\
+$git_branch\
+$git_status\
+[](fg:#9CA6B8 bg:red)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:red bg:green)\
+$docker_context\
+[](fg:green bg:blue)\
+$os\
+[ ](blue)\
+"""
+
+right_format = """
+[ ](blue)\
+$time
+[ ](blue)\
+"""
+
+command_timeout = 500
+
+[username]
+show_always = true
+style_user = "bg:#DFE1E8"
+style_root = "bg:#DFE1E8"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#B9C0CD"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:#9CA6B8"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#9CA6B8"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:red"
+format = '[(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = " "
+style = "bg:red"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = 'fg:black bg:blue'
+format = '[ $time ]($style)'
+
+[os]
+format = "[ $symbol ($type )]($style)"
+style = 'fg:black bg:blue'
+disabled = false
+
+[os.symbols]
+Arch = "󰣇"
+Fedora = ""

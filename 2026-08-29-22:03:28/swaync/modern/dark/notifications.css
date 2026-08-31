@@ -1,0 +1,166 @@
+/* Original theme: https://github.com/zDyanTB/HyprNova */
+/* Edited (poorly) by @GeodeArc */
+/* Recolored to match Waybar */
+
+@define-color text            @foreground;
+@define-color border          #E7C1A4;
+@define-color background-alt  rgba(23, 14, 12, 0.7);
+@define-color selected        #b89479;
+@define-color hover           #b89479;
+@define-color urgent          @color2;
+
+* {
+  color: @text;
+  all: unset;
+  font-size: 10px;
+  font-family: "FiraCode Nerd Font 10";
+  transition: 200ms;
+}
+
+.notification-row {
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+  background: rgba(23, 14, 12, 0.7);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  border: 1px solid @border;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 0;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification {
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification.critical {
+  border: 2px solid @urgent;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+.notification-content {
+  margin: 14px;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> * {
+  min-height: 3.4em;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> *
+.notification-action {
+  border-radius: 10px;
+  background-color: rgba(23, 14, 12, 0.7);
+  margin: 6px;
+  border: 1px solid @border;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> *
+.notification-action:hover {
+  background-color: @selected;
+  border: 1px solid @border;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.notification
+> *:last-child
+> *
+.notification-action:active {
+  background-color: @selected;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Image */
+/* -------------------------------------------------------------------------- */
+
+.image {
+  margin: 10px 20px 10px 0px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Text */
+/* -------------------------------------------------------------------------- */
+
+.summary {
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.body {
+  font-size: 0.8rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Close Button */
+/* -------------------------------------------------------------------------- */
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button {
+  margin: 6px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: @text;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button:hover {
+  background-color: @hover;
+  border: 1px solid @border;
+}
+
+.floating-notifications.background
+.notification-row
+.notification-background
+.close-button:active {
+  background-color: @selected;
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Progress Bars */
+/* -------------------------------------------------------------------------- */
+
+.notification.critical progress {
+  background-color: @selected;
+}
+
+.notification.low progress,
+.notification.normal progress {
+  background-color: @selected;
+}

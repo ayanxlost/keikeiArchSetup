@@ -1,0 +1,395 @@
+@import "colors.css";
+
+* {
+    font-family: "FiraCode Nerd";
+    border: none;
+}
+
+
+window#waybar {
+    background: transparent;
+}
+
+
+/* =========================
+ *  ALL PILL CONTAINERS
+ * = *======================== */
+
+#workspaces,
+#window,
+#taskbar,
+#custom-media,
+#cava,
+#custom-appmenu,
+#clock,
+.modules-right {
+
+    background: #000000;
+    border-radius: 999px;
+    border: 2px solid @foreground;
+
+}
+
+
+/* =========================
+ *  APP MENU
+ * = *======================== */
+
+#custom-appmenu {
+
+margin: 4px 10px;
+padding: 4px 12px;
+
+color: white;
+font-size: 14px;
+
+opacity: 0.9;
+}
+
+
+
+/* =========================
+ *  WORKSPACES
+ * = *======================== */
+
+#workspaces {
+
+margin: 3px 10px;
+padding: 3px 6px;
+
+color: white;
+opacity: .9;
+
+}
+
+
+#workspaces button {
+
+padding: 0px 6px;
+margin: 2px 3px;
+
+color: white;
+
+opacity: .5;
+
+}
+
+
+#workspaces button.active {
+
+background: @color4;
+
+color: white;
+
+border-radius: 999px;
+
+padding: 0px 15px;
+
+opacity: 1;
+
+}
+
+
+#workspaces button:hover {
+
+background: @color4;
+
+border-radius: 999px;
+
+opacity: .8;
+
+}
+
+
+
+/* =========================
+ *  WINDOW TITLE
+ * = *======================== */
+
+#window {
+
+margin: 3px 10px;
+
+padding: 4px 12px;
+
+color: white;
+
+opacity: .9;
+
+}
+
+
+
+/* =========================
+ *  TASKBAR
+ * = *======================== */
+
+#taskbar {
+
+margin: 3px 10px;
+
+padding: 3px 6px;
+
+}
+
+
+#taskbar button {
+
+border-radius: 999px;
+
+padding: 0px 8px;
+
+}
+
+
+#taskbar.empty {
+
+background: transparent;
+
+border: none;
+
+}
+
+
+
+/* =========================
+ *  MEDIA / CAVA
+ * = *======================== */
+
+#custom-media,
+#cava {
+
+margin: 3px 10px;
+
+padding: 4px 12px;
+
+color: white;
+
+opacity: .9;
+
+}
+
+
+
+/* =========================
+ *  RIGHT SIDE SINGLE PILL
+ * = *======================== */
+
+.modules-right {
+
+    margin: 5px 10px 5px 0px;
+
+    padding: 0px 8px;
+
+}
+
+
+
+/* remove individual bubbles */
+
+#network,
+#bluetooth,
+#battery,
+#pulseaudio {
+
+background: transparent;
+
+border: none;
+
+border-radius: 0px;
+
+margin: 0px;
+
+padding: 0px 8px;
+
+color: white;
+
+}
+
+
+
+/* spacing */
+
+#network {
+
+padding-left: 12px;
+
+}
+
+
+#pulseaudio {
+
+padding-right: 12px;
+
+}
+
+
+
+/* =========================
+ *  BLUETOOTH
+ * = *======================== */
+
+#bluetooth.off {
+
+color: #777;
+
+}
+
+
+
+/* =========================
+ *  BATTERY
+ * = *======================== */
+
+#battery.charging,
+#battery.plugged {
+
+color: white;
+
+}
+
+
+@keyframes blink {
+
+    to {
+
+        background: #000000;
+
+        color: white;
+
+    }
+
+}
+
+
+#battery.critical:not(.charging) {
+
+background: #f53c3c;
+
+color: white;
+
+animation-name: blink;
+
+animation-duration: .5s;
+
+animation-iteration-count: infinite;
+
+}
+
+
+
+/* =========================
+ *  CLOCK
+ * = *======================== */
+
+#clock {
+
+margin: 4px 10px;
+
+padding: 4px 12px;
+
+color: white;
+
+opacity: .9;
+
+}
+
+
+
+/* =========================
+ *  QUICK BUTTONS
+ * = *======================== */
+
+#custom-cliphist,
+#custom-settings,
+#custom-wallpaper,
+#custom-hyprpicker,
+#custom-system,
+#custom-nightlight {
+
+margin: 10px;
+
+font-size: 20px;
+
+font-weight: bold;
+
+color: @foreground;
+
+}
+
+
+
+/* =========================
+ *  CPU / RAM
+ * = *======================== */
+
+#cpu,
+#memory,
+#disk {
+
+color: @foreground;
+
+font-size: 14px;
+
+}
+
+
+
+/* =========================
+ *  TOOLTIP
+ * = *======================== */
+
+tooltip {
+
+    background: #000000;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+}
+
+
+tooltip label {
+
+    color: white;
+
+}
+
+
+
+/* =========================
+ *  TRAY
+ * = *======================== */
+
+#tray {
+
+padding: 0px 10px;
+
+}
+
+
+#tray menu {
+
+background: #000000;
+
+color: white;
+
+}
+
+
+
+/* =========================
+ *  POWER + NOTIFS
+ * = *======================== */
+
+#custom-exit,
+#custom-sidebar {
+
+color: @foreground;
+
+font-size: 20px;
+
+margin: 3px;
+
+}
